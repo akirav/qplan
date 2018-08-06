@@ -177,26 +177,26 @@ class ControlPanel(PlBase.Plugin):
         self.weights_qf = filetypes.WeightsFile(self.input_dir, self.logger,
                                                 file_ext=self.input_fmt)
         # Load "Weights" Tab
-        if not self.view.gpmon.has_plugin('weightstab'):
-            self.view.load_plugin('weightstab', self.spec_weights)
-            self.view.start_plugin('weightstab')
+        #if not self.view.gpmon.has_plugin('weightstab'):
+        #    self.view.load_plugin('weightstab', self.spec_weights)
+        #    self.view.start_plugin('weightstab')
         self.model.set_weights_qf(self.weights_qf)
 
         # read schedule
         self.schedule_qf = filetypes.ScheduleFile(self.input_dir, self.logger,
                                                   file_ext=self.input_fmt)
         # Load "Schedule" Tab
-        if not self.view.gpmon.has_plugin('scheduletab'):
-            self.view.load_plugin('scheduletab', self.spec_schedule)
-            self.view.start_plugin('scheduletab')
+        #if not self.view.gpmon.has_plugin('scheduletab'):
+        #    self.view.load_plugin('scheduletab', self.spec_schedule)
+        #    self.view.start_plugin('scheduletab')
         self.model.set_schedule_qf(self.schedule_qf)
 
         # read proposals
         self.programs_qf = filetypes.ProgramsFile(self.input_dir, self.logger,
                                                   file_ext=self.input_fmt)
-        if not self.view.gpmon.has_plugin('programstab'):
-            self.view.load_plugin('programstab', self.spec_programs)
-            self.view.start_plugin('programstab')
+        #if not self.view.gpmon.has_plugin('programstab'):
+        #    self.view.load_plugin('programstab', self.spec_programs)
+        #    self.view.start_plugin('programstab')
         self.model.set_programs_qf(self.programs_qf)
 
         # read observing blocks
